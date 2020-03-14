@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharacterDetailDataSource: NSObject, UITableViewDataSource {
+final class CharacterDetailDataSource: NSObject, UITableViewDataSource {
     // MARK: - Properties
     private let viewModel: CharacterDetailViewModelProtocol
     

@@ -15,7 +15,7 @@ protocol CharacterListDataSourceProtocol {
     func isLoadingCell(_ cell: UITableViewCell) -> Bool
 }
 
-class CharacterListDataSource: NSObject, UITableViewDataSource {
+final class CharacterListDataSource: NSObject, UITableViewDataSource {
     // MARK: - Properites
     var updateHandler: (() -> Void)?
     

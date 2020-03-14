@@ -29,9 +29,7 @@ struct MarvelCharacter: Decodable {
 
 extension MarvelCharacter: CharacterListItemProtocol {
     var text: String {
-        let unkown = "Unkown"
-        guard let name = name else { return unkown }
-        return name.isEmpty ? unkown : name
+        return name.text(placeholder: "Without Name🙁")
     }
     
     func url(for imageType: ImageType) -> URL? {

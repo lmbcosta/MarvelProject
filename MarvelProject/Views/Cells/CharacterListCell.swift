@@ -44,17 +44,17 @@ class CharacterListCell: UITableViewCell {
     }
     
     // MARK: - Private
-    func setupView() {
+    private func setupView() {
         setupThumnail()
         setupLabel()
     }
     
-    func setupThumnail() {
+    private func setupThumnail() {
         contentView.addSubview(thumbnail)
         setupThumnailConstraints()
     }
     
-    func setupThumnailConstraints() {
+    private func setupThumnailConstraints() {
         thumbnail.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             thumbnail.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
@@ -64,14 +64,14 @@ class CharacterListCell: UITableViewCell {
         ])
     }
     
-    func setupLabel() {
+    private func setupLabel() {
         label.textAlignment = .left
         label.font = Font.label
         contentView.addSubview(label)
         setupLabelConstraints()
     }
     
-    func setupLabelConstraints() {
+    private func setupLabelConstraints() {
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),

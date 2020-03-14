@@ -60,11 +60,3 @@ private extension CharacterDetailViewModel {
         }
     }
 }
-
-private extension Optional where Wrapped == String {
-    func text(placeholder: String) -> String {
-        guard let text = self,
-            !text.isEmpty else { return placeholder }
-        return text
-    }
-}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80333946241C4FC600A78830 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80333945241C4FC600A78830 /* ImageSize.swift */; };
+		80C04836241D470900F09C40 /* OptionaStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C04835241D470900F09C40 /* OptionaStringExtensions.swift */; };
 		80D77029241B908E0036A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D77028241B908E0036A4AE /* AppDelegate.swift */; };
 		80D77032241B90910036A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D77031241B90910036A4AE /* Assets.xcassets */; };
 		80D77035241B90910036A4AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D77033241B90910036A4AE /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		80333945241C4FC600A78830 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
+		80C04835241D470900F09C40 /* OptionaStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionaStringExtensions.swift; sourceTree = "<group>"; };
 		80D77025241B908E0036A4AE /* MarvelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D77028241B908E0036A4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80D77031241B90910036A4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +114,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80C04834241D46E700F09C40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80C04835241D470900F09C40 /* OptionaStringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		80C04837241D47DD00F09C40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80D77033241B90910036A4AE /* LaunchScreen.storyboard */,
+				80D77031241B90910036A4AE /* Assets.xcassets */,
+				80D77036241B90910036A4AE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		80D7701C241B908E0036A4AE = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +153,7 @@
 		80D77027241B908E0036A4AE /* MarvelProject */ = {
 			isa = PBXGroup;
 			children = (
+				80D77028241B908E0036A4AE /* AppDelegate.swift */,
 				80D7704A241B90990036A4AE /* Coordinator */,
 				80D7704D241B91BF0036A4AE /* Controllers */,
 				80D7705B241B93480036A4AE /* ViewModels */,
@@ -140,10 +161,8 @@
 				80D77063241B94440036A4AE /* Models */,
 				80D77060241B93EB0036A4AE /* Service */,
 				80D7706F241BB9E70036A4AE /* Helper */,
-				80D77028241B908E0036A4AE /* AppDelegate.swift */,
-				80D77031241B90910036A4AE /* Assets.xcassets */,
-				80D77033241B90910036A4AE /* LaunchScreen.storyboard */,
-				80D77036241B90910036A4AE /* Info.plist */,
+				80C04834241D46E700F09C40 /* Extensions */,
+				80C04837241D47DD00F09C40 /* Resources */,
 			);
 			path = MarvelProject;
 			sourceTree = "<group>";
@@ -425,6 +444,7 @@
 				80F1B19C241D07C500CB2947 /* ModelProtocols.swift in Sources */,
 				80D77067241B977B0036A4AE /* CharacterListCell.swift in Sources */,
 				80D7708F241BFB7B0036A4AE /* ViewState.swift in Sources */,
+				80C04836241D470900F09C40 /* OptionaStringExtensions.swift in Sources */,
 				80D77029241B908E0036A4AE /* AppDelegate.swift in Sources */,
 				80D7706B241B97B70036A4AE /* DetailCell.swift in Sources */,
 				80333946241C4FC600A78830 /* ImageSize.swift in Sources */,
@@ -588,7 +608,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423W5F3JD5;
-				INFOPLIST_FILE = MarvelProject/Info.plist;
+				INFOPLIST_FILE = MarvelProject/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423W5F3JD5;
-				INFOPLIST_FILE = MarvelProject/Info.plist;
+				INFOPLIST_FILE = MarvelProject/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
