@@ -45,7 +45,7 @@ class ModelTests: XCTestCase {
         XCTAssertTrue(sut.id == 1011334)
     }
     
-    func testCharacterThumNail() {
+    func testCharacterThumnail() {
         // Given
         let jsonFileName = "wrapperResponse"
         let wrapper: CharacterDataWrapper = bundle.decodeFile(name: jsonFileName)!
@@ -56,5 +56,29 @@ class ModelTests: XCTestCase {
         // Then
         XCTAssertTrue(sut?.extension == "jpg")
         XCTAssertTrue(sut?.path == "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784")
+    }
+    
+    func testCharacterSquareThumbnail() {
+        // Given
+        let jsonFileName = "characterResponse1"
+        let sut: MarvelCharacter = bundle.decodeFile(name: jsonFileName)!
+        
+        // When
+        let urlString = sut.url(for: .square)?.absoluteString
+        
+        // Then
+        XCTAssertTrue(urlString == "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/standard_medium.jpg")
+    }
+    
+    func testCharacterLandscapeThumbnail() {
+        // Given
+        let jsonFileName = "characterResponse1"
+        let sut: MarvelCharacter = bundle.decodeFile(name: jsonFileName)!
+        
+        // When
+        let urlString = sut.url(for: .landscape)?.absoluteString
+        
+        // Then
+        XCTAssertTrue(urlString == "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/landscape_amazing.jpg")
     }
 }

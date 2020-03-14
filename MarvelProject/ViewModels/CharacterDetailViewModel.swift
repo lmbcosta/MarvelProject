@@ -24,7 +24,7 @@ struct CharacterDetailViewModel: CharacterDetailViewModelProtocol {
     // MARK:  - Properties
     private(set) var item: MarvelCharacter
     
-    var title: String { item.name ?? "" }
+    var title: String { item.name.text(placeholder: "Without Title😕") }
     
     var imageItem: ImageItemProtocol { item }
     
