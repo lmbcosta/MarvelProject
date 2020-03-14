@@ -25,8 +25,6 @@ final class AppCoordinator {
         let viewModel = CharacterListViewModel(service: service)
         let viewController = CharacterListViewController(viewModel: viewModel,
                                                          navigationDelegate: self)
-        
-        
         let navigationcontroller = UINavigationController(rootViewController: viewController)
         navigationcontroller.navigationBar.prefersLargeTitles = true
         return navigationcontroller
