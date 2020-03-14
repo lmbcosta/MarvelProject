@@ -9,11 +9,6 @@
 import UIKit
 import Kingfisher
 
-protocol CharacterListItemProtocol {
-    var text: String { get }
-    func url(for imageType: ImageType) -> URL?
-}
-
 class CharacterListCell: UITableViewCell {
     // MARK: - Properties
     static let reuseIdentifier = "CharacterListCell"
@@ -36,9 +31,10 @@ class CharacterListCell: UITableViewCell {
     // MARK: - Internal
     func setupContent(_ item: CharacterListItemProtocol) {
         label.text = item.text
-        
         guard let imageURL = item.url(for: .square) else { return }
-        thumbnail.kf.setImage(with: imageURL, placeholder: Images.placeholder)
+        thumbnail.kf.setImage(with: imageURL,
+                              placeholder: Images.placeholder,
+                              options: [.transition(.fade(1))])
     }
     
     override func layoutSubviews() {
@@ -85,7 +81,7 @@ class CharacterListCell: UITableViewCell {
     }
 }
 
-extension CharacterListCell {
+private extension CharacterListCell {
     struct Images {
         static let placeholder = UIImage(named: "placeholder")!
     }

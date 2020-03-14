@@ -41,9 +41,9 @@ class CharacterDetailViewController: UIViewController {
     
     private func setupTableView() {
         tableView.separatorStyle = .none
-        tableView.bounces = false
         tableView.delegate = self
         tableView.dataSource = dataSource
+        tableView.estimatedRowHeight = Dimensions.DetailCell.estimatedRowHeight
         view.addSubview(tableView)
         setupTableviewContraints()
     }
@@ -62,7 +62,7 @@ class CharacterDetailViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension CharacterDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.item == 0 ? Dimensions.ImageCell.rowHeight : Dimensions.DetailCell.rowHEight
+        return indexPath.item == 0 ? Dimensions.ImageCell.rowHeight : UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -73,11 +73,11 @@ extension CharacterDetailViewController: UITableViewDelegate {
 extension CharacterDetailViewController {
     struct Dimensions {
         struct ImageCell {
-            static let rowHeight: CGFloat = 80
+            static let rowHeight: CGFloat = 300
         }
         
         struct DetailCell {
-            static let rowHEight: CGFloat = 40
+            static let estimatedRowHeight: CGFloat = 80
         }
     }
 }

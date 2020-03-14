@@ -108,6 +108,8 @@ class CharacterListViewController: UIViewController {
 // MARK: UITableViewDelegate
 extension CharacterListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
         let itemViewModel = dataSource.viewModelForItem(at: indexPath.row)
         navigationDelegate?.navigateToCharacterDetail(from: self,
                                                       using: itemViewModel)

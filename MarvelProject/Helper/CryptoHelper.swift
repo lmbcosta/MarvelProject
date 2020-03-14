@@ -19,8 +19,6 @@ struct CryptoHelper: CryptoHelperProtocol {
     }
     
     private func hashMD5(contents: [String]) -> String {
-        let hash = contents.reduce("", +).md5()
-        print(hash)
-        return hash
+        return contents.reduce("", +).md5()
     }
 }
