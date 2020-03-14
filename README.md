@@ -33,6 +33,7 @@ Due to a lack of time, there are some things I would like to improve:
 - Layout was terrible. I would like to be able to focus more on this subject.
 - Try to cover UI layer with more unit tests.
 - Use and abuse of Marvel API data, there is so much content that definitely I could use it to improve the app.
+- Proper way to declare private keys on client side. The private key used for Marvel API is hardcoded. I am not confortable with that but for the sake of this exercise I left as it is. I looked up for some approaches such as [this one](https://nshipster.com/secrets/#universe-brain-client-secrecy-is-impossible).
 
 ## Author
 Luís Costa - lmbcosta@hotmail.com
