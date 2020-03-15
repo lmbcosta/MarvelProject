@@ -117,9 +117,7 @@ extension CharacterListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if dataSource.isLoadingCell(cell), indexPath.item != 0 {
-            viewModel.requestCharactersNextPage { [weak self] in
-                self?.handleViewState($0)
-            }
+            fetchHandler()
         }
     }
 }
