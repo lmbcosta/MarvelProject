@@ -30,7 +30,7 @@ This project is covered with 24 unit tests divided for different layers, being U
 You can check them [here](https://github.com/lmbcosta/MarvelProject/tree/master/MarvelProjectTests/UnitTests). 
 
 ## Last Considerations
-Due to a lack of time, there are some things that should be improven:
+Due to a lack of time, there are some things that should be improved:
 - Layout was terrible. I would like to be able to focus more on this subject.
 - Try to cover UI layer with more unit tests.
 - Use and abuse of Marvel API data, there is so much content that definitely I could use it to improve the app.
