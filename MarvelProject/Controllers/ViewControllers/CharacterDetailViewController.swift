@@ -10,7 +10,7 @@ import UIKit
 
 class CharacterDetailViewController: UIViewController {
     // MARK: - Properties
-    private let tableView = UITableView(frame: .zero)
+    let tableView = UITableView(frame: .zero)
     private let viewModel: CharacterDetailViewModelProtocol
     private let dataSource: CharacterDetailDataSource
     

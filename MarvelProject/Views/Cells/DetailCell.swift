@@ -12,8 +12,8 @@ class DetailCell: UITableViewCell {
     // MARK: - Properties
     static let reuseIdentifier = "DetailCell"
     
-    private let topLabel = UILabel(frame: .zero)
-    private let bottomLabel = UILabel(frame: .zero)
+    let topLabel = UILabel(frame: .zero)
+    let bottomLabel = UILabel(frame: .zero)
     
     // MARK: - Initializer
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

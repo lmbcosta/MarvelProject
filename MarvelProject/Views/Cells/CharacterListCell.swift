@@ -13,8 +13,8 @@ class CharacterListCell: UITableViewCell {
     // MARK: - Properties
     static let reuseIdentifier = "CharacterListCell"
     
-    private let thumbnail = UIImageView(frame: .zero)
-    private let label = UILabel(frame: .zero)
+    let thumbnail = UIImageView(frame: .zero)
+    let label = UILabel(frame: .zero)
     
     // MARK: - Initializer
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

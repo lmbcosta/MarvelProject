@@ -10,8 +10,8 @@ import UIKit
 
 class CharacterListViewController: UIViewController {
     // MARK: - Properties
-    private let tableView = UITableView(frame: .zero)
-    private let emptyStateView = EmptyStateView()
+    let tableView = UITableView(frame: .zero)
+    let emptyStateView = EmptyStateView()
     private let viewModel: CharacterListPaginable
     private let dataSource: CharacterListDataSource
     
